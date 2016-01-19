@@ -8,16 +8,13 @@
 ```
 # add dokku user
 cat /root/.ssh/authorized_keys | sshcommand acl-add dokku dokku
--
 
 # create swap file
 sudo fallocate -l 2048m /mnt/swap_file.swap && sudo chmod 600 /mnt/swap_file.swap && sudo mkswap /mnt/swap_file.swap && sudo swapon /mnt/swap_file.swap && echo "/mnt/swap_file.swap none swap sw 0 0" >> /etc/fstab
--
 
 # update local settings
 sh -c "echo 'LANG=en_US.UTF-8\nLC_ALL=en_US.UTF-8' > /etc/default/locale
 reboot
--
 
 # create dokku app
 dokku apps:create met_deploy
@@ -32,10 +29,10 @@ dokku mongo:link met_deploy_db met_deploy
 - add a `.buildpacks` file with `https://github.com/AdmitHub/meteor-buildpack-horse.git`
 - send to github and to remote dokku
 ```
+# cd into your repo
 git add .
 git commit -m "add .buildpacks file"
 git push
--
 
 # set remote git
 git remote add dokku dokku@droplet_ip:met_deploy
