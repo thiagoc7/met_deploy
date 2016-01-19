@@ -33,11 +33,12 @@ dokku mongo:link met_deploy_db met_deploy
 - send to github and to remote dokku
 ```
 git add .
-git commit -m "deploy files"
+git commit -m "add .buildpacks file"
 git push
 -
 
 # set remote git
 git remote add dokku dokku@droplet_ip:met_deploy
+git push dokku master
 
 ```
