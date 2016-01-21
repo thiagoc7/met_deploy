@@ -1,0 +1,23 @@
+{
+  "name": "met_deploy",
+  "version": "1.0.0",
+  "description": "- create a `512mb` droplet with one click Dokku 0.4.1 - point a `A` DNS Record to your droplet's IP - got to tour droplet's IP on browser, and configure dokku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagoc7/met_deploy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagoc7/met_deploy/issues"
+  },
+  "homepage": "https://github.com/thiagoc7/met_deploy#readme",
+  "dependencies": {
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  }
+}
