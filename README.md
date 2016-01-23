@@ -26,12 +26,12 @@ dokku mongo:create met_deploy_db
 dokku mongo:link met_deploy_db met_deploy
 ```
 
-- add a `.buildpacks` file with `https://github.com/AdmitHub/meteor-buildpack-horse.git`
+- add a `.env` file with `export BUILDPACK_URL=https://github.com/AdmitHub/meteor-buildpack-horse.git`
 - send to github and to remote dokku
 ```
 # cd into your repo
 git add .
-git commit -m "add .buildpacks file"
+git commit -m "add .env file"
 git push
 
 # set remote git
@@ -39,3 +39,4 @@ git remote add dokku dokku@droplet_ip:met_deploy
 git push dokku master
 
 ```
+- add a `CHECKS` file
